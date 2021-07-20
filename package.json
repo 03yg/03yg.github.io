@@ -1,0 +1,27 @@
+{
+  "name": "03yg.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/03yg/03yg.github.io.git"
+  },
+  "author": "yg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/03yg/03yg.github.io/issues"
+  },
+  "homepage": "https://github.com/03yg/03yg.github.io#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
