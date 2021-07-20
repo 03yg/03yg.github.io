@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactDom = require('react-dom');
 
-const Stock = require('/src/Stock');
+const Stocks = require('/src/Stocks');
 
-ReactDom.render(<Stock />, document.querySelector('#root'));
+ReactDom.render(<Stocks />, document.querySelector('#root'));

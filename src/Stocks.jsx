@@ -1,12 +1,8 @@
 const React = require('react');
 const { useState, useRef } = React;
 
-const Stock = () => {
-  const [first, setFirst] = useState(Math.ceil(Math.random() * 9));
-  const [second, setSecond] = useState(Math.ceil(Math.random() * 9));
-  const [value, setValue] = useState('');
-  const [result, setResult] = useState('');
-  const inputEl = useRef(null);
+const Stocks = () => {
+  const [stocks, setStocks] = [];
 
   const onSubmitForm = (e) => {
     e.preventDefault();
@@ -39,4 +35,4 @@ const Stock = () => {
   );
 };
 
-module.exports = Stock;
+module.exports = Stocks;
