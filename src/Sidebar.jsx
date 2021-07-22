@@ -63,7 +63,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="b-example-divider" style={{'width': 'calc(100vw - 280px)',
-                                                       'height': 'calc(100vh - 126px)',}}></div>
+                                                       'height': 'calc(100vh - 128px)',}}></div>
         </>
     );
 };
