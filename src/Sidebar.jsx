@@ -4,7 +4,7 @@ const Sidebar = () => {
     return (
         <>
             <div className="flex-shrink-0 p-3 bg-white" style={{'width': '280px'}}>
-                <a href="/" className="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <a href="#" className="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                     <span className="fs-5 fw-semibold">Collapsible</span>
                 </a>
                 <ul className="list-unstyled ps-0">
@@ -63,7 +63,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="b-example-divider" style={{'width': 'calc(100vw - 280px)',
-                                                       'height': 'calc(100vh - 128px)',}}></div>
+                                                       'height': 'calc(100vh - 72px)',}}></div>
         </>
     );
 };

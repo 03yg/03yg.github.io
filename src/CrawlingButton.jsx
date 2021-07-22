@@ -8,10 +8,11 @@ const CrawlingButton = () => {
     const [data, setData] = useState();
     const [disabled, setDisabled] = useState(false);
 
-    const onClick = () => {
-        setBtnName('');
-        setDisabled(true);
+    const onClick = () => { // 클릭시
+        setBtnName(''); // 로딩을 위하여 텍스트를 지움
+        setDisabled(true); // 로딩하는 동안 비활성화
         getHTML().then(html => {
+            setDisabled(true); // 로딩이 완료되면 다시 활성화
             const $ = cheerio.load(html.data);
             let titles = $('td a');
             let netChanges = $('span.tah.p11');
@@ -24,28 +25,16 @@ const CrawlingButton = () => {
                 });
             });
             setData(datas);
-            setBtnName('Crawling (' + datas.length + ')');
+            setBtnName('Crawling (' + datas.length + ')'); // 완료시
         });
-        /*getHTML((data) => {
-            setData(data);
-            setBtnName('검색 완료 (' + data.length + ')');
-        });*/
     };
 
-    // 크롤링을 시작합니다.
-    const getHTML = async  () => {
+    const getHTML = async  () => { // 크롤링을 시작합니다.
         try {
             return await axios.get(`https://yg01.herokuapp.com/https://finance.naver.com/sise/sise_group.nhn?type=upjong`);
         } catch (error) {
             console.log(error);
         }
-        /*axios.get(`https://chaewonkong.github.io`)
-            .then(dataa => {
-                console.log(dataa.data);
-                const $ = cheerio.load(dataa.data);
-                return $('.sidebar-nav-item');
-                // $('.sidebar-nav-item').each((index, item)=>{console.log(item)});
-            });*/
     }
 
     return (
