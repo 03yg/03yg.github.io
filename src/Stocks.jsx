@@ -1,22 +1,27 @@
-const React = require('react');
-const { useState, useRef } = React;
+import React from 'react';
+
+import LoadingButton from './LoadingButton';
+import CrawlingButton from './CrawlingButton';
+import Header from './Header';
+import Sidebar from './Sidebar';
 
 const Stocks = () => {
-  const [stocks, setStocks] = [];
 
-  const onSubmitForm = (e) => {
-    e.preventDefault();
-  };
-  return (
-    <>
-      <form onSubmit={onSubmitForm}>
-        <input
-          type="number"
-        />
-        <button>입력!</button>
-      </form>
-    </>
-  );
+    return (
+        <>
+            <Header/>
+            <LoadingButton/>
+            <CrawlingButton/>
+            <div style={{'display': 'flex','flexWrap': 'nowrap',
+                         'height': 'calc(100vh - 126px)',
+                         'height': '-webkit-fill-available',
+                         'maxHeight': '100vh',
+                         'overflowX': 'auto',
+                         'overflowY': 'hidden'}}>
+                <Sidebar/>
+            </div>
+        </>
+    );
 };
 
-module.exports = Stocks;
+export default Stocks;

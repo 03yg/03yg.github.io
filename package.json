@@ -17,12 +17,17 @@
   },
   "homepage": "https://github.com/03yg/03yg.github.io#readme",
   "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
+    "cheerio": "^1.0.0-rc.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
